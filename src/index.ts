@@ -15,6 +15,9 @@ const client = new Client();
  */
 client.on('ready', () => {
     console.log('I am ready!');
+    // @ts-ignore
+    const channel: TextChannel = client.channels.get(process.env.CHANNEL_GENERAL_ID);
+    channel.send('LMG MOUNTED AND LOADED!');
 });
 
 // client.on('channelCreate', (...args) => {console.log('channelCreate', {...args})});
@@ -98,7 +101,7 @@ client.on('voiceStateUpdate', (oldMember: GuildMember, newMember: GuildMember) =
         });
 
         console.log(members);
-        
+
         // let response = '';
 
         // if (movedUsers.length >= 2) {
