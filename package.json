@@ -1,0 +1,23 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.1",
+    "typescript": "^3.7.2"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "postinstall": "npm run build && node ./deploymentScripts/webConfigPrep.js",
+    "start": "tsc --build && node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon --watch ./src -e ts --exec \"npm run start\""
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.14"
+  }
+}
