@@ -1,14 +1,22 @@
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 // const Discord = require('discord.js');
-import * as path from "path";
-import {config} from 'dotenv';
-import { Channel, Client, GuildMember, Message, TextChannel, VoiceChannel } from 'discord.js';
-
+const path = require("path");
+const dotenv_1 = require("dotenv");
+const discord_js_1 = require("discord.js");
 const env = path.resolve(__dirname, '../.env');
-config({path: env});
-
+dotenv_1.config({ path: env });
 // Create an instance of a Discord client
-const client = new Client();
-
+const client = new discord_js_1.Client();
 /**
  * The ready event is vital, it means that only _after_ this will your bot start reacting to information
  * received from Discord
@@ -16,10 +24,9 @@ const client = new Client();
 client.on('ready', () => {
     console.log('I am ready!');
     // @ts-ignore
-    const channel: TextChannel = client.channels.get(process.env.TEXT_PRIMARY_ID);
+    const channel = client.channels.get(process.env.TEXT_PRIMARY_ID);
     // channel.send('LMG MOUNTED AND LOADED!');
 });
-
 // client.on('channelCreate', (...args) => {console.log('channelCreate', {...args})});
 // client.on('channelDelete', (...args) => {console.log('channelDelete', {...args})});
 // client.on('channelPinsUpdate', (...args) => {console.log('channelPinsUpdate', {...args})});
@@ -45,19 +52,17 @@ client.on('ready', () => {
 // client.on('guildMemberUpdate', (...args) => {console.log('guildMemberUpdate', {...args})});
 // client.on('guildUnavailable', (...args) => {console.log('guildUnavailable', {...args})});
 // client.on('guildUpdate', (...args) => {console.log('guildUpdate', {...args})});
-client.on('message', (message: Message) => {
+client.on('message', (message) => {
     // console.log(message);
-
     if (message.content === 'do it') {
         var voiceChannel = message.member.voiceChannel;
-        voiceChannel.join().then(connection =>{
+        voiceChannel.join().then(connection => {
             const dispatcher = connection.playFile('/home/waltonc/Resources/audio/memes/ha-gyyy.mp3');
             dispatcher.on("end", end => {
                 voiceChannel.leave();
             });
         }).catch(err => console.log(err));
     }
-
 });
 // client.on('messageDelete', (...args) => {console.log('messageDelete', {...args})});
 // client.on('messageDeleteBulk', (...args) => {console.log('messageDeleteBulk', {...args})});
@@ -80,7 +85,6 @@ client.on('message', (message: Message) => {
 // client.on('voiceStateUpdate', (...args) => {console.log('voiceStateUpdate', {...args})});
 // client.on('warn', (...args) => {console.log('warn', {...args})});
 // client.on('webhookUpdate', (...args) => {console.log('webhookUpdate', {...args})});
-
 // client.on('presenceUpdate', (oldMember: GuildMember, newMember: GuildMember) => {
 //     // console.log('presenceUpdate', { oldMember, newMember})
 //
@@ -90,9 +94,7 @@ client.on('message', (message: Message) => {
 //         // tts: true
 //     })
 // });
-
-client.on('voiceStateUpdate', (oldMember: GuildMember, newMember: GuildMember) => {
-
+client.on('voiceStateUpdate', (oldMember, newMember) => {
     // console.log('new voiceStateUpdate event');
     // console.log('oldMember', oldMember);
     // console.log('newMember', newMember);
@@ -104,22 +106,19 @@ client.on('voiceStateUpdate', (oldMember: GuildMember, newMember: GuildMember) =
     //
     // console.log(`A user has moved from ${oldMember.voiceChannelID} to ${newMember.voiceChannelID}`);
     // console.log("\n\n\n\n\n\n\n\n");
-
     // @ts-ignore
-    const channel: TextChannel = client.channels.get(process.env.TEXT_PRIMARY_ID);
+    const channel = client.channels.get(process.env.TEXT_PRIMARY_ID);
     // @ts-ignore
-    const waitingChannel: VoiceChannel = client.channels.get(process.env.VOICE_WAITING_ID);
+    const waitingChannel = client.channels.get(process.env.VOICE_WAITING_ID);
     // channel.sendMessage(`${newMember.user.username} has joined ${newMember.voiceChannel.name}`);
-
     if (newMember.voiceChannel === undefined) {
         return;
     }
-
     if (newMember.voiceChannel.id === process.env.VOICE_PRIMARY_ID) {
         // Move all users from waiting lounge
         // let movedUsers =
-        const members = waitingChannel.members.map(async (member:GuildMember) => {
-            await member.setVoiceChannel(process.env.VOICE_PRIMARY_ID);
+        const members = waitingChannel.members.map((member) => __awaiter(void 0, void 0, void 0, function* () {
+            yield member.setVoiceChannel(process.env.VOICE_PRIMARY_ID);
             // return .then(m => {
             //     const message = `Moved ${m.user.username} to main chat`;
             //     channel.send(message);
@@ -127,14 +126,10 @@ client.on('voiceStateUpdate', (oldMember: GuildMember, newMember: GuildMember) =
             //     return m
             // });
             // return member.user.username;
-        });
-
+        }));
         // const formatter = new Intl.ListFormat();
-
         // console.log(members);
-
         // let response = '';
-
         // if (movedUsers.length >= 2) {
         //     var last = movedUsers.pop();
         //     response = movedUsers.join(', ') + ' and ' + last;
@@ -142,10 +137,9 @@ client.on('voiceStateUpdate', (oldMember: GuildMember, newMember: GuildMember) =
         // } else {
         //     response = movedUsers[0];
         // }
-
         // channel
     }
 });
-
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
 client.login(process.env.DISCORD_BOT_TOKEN);
+//# sourceMappingURL=index.js.map
