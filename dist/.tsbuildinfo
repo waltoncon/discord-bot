@@ -162,12 +162,12 @@
         "signature": "a13f4283e0e064d3a6f5326da39cf0425d65e92a96cf9c2a8d8c16b97ea1fad5"
       },
       "../src/commands/LeaveCommand.ts": {
-        "version": "6af738c5235efa9c652720c2365400172790b9997a5a0b893acf2a59a8461d99",
-        "signature": "5d0c5ca42f77ea8b3a315c258e7b816d602fc5b48848bb42e7a84c67a1c38a4e"
+        "version": "80a67d2d6d9157a1a3cabf73cd12bb732a0afd5a5f6feccddeb218af78fbd5d0",
+        "signature": "234e796ffc75b4da269c34937808b85e0d60e913524350d153764588bf6dd837"
       },
       "../src/commands/PlayCommand.ts": {
-        "version": "7fb7c7ec21fe60d1c428ac46da0577703484c82dc0f9580704635b6d6d260986",
-        "signature": "0312c05ca58c3093e913b0159726726b3dca60a3c4cbdd9f8669c40a77d416e4"
+        "version": "98bc7bb5225298bb8f0d60da70d9d077490ac34282a90de473be098e84401e18",
+        "signature": "04f2abc7e0c0adff3e662e0eb92daed3627cca45ddfef766d971a2517dd92a40"
       },
       "../src/commands/SayCommand.ts": {
         "version": "7bf714f7c02607bb3db4d2f7184c2df8eca2f7c97f685b700a4d1b6a50f3444b",
@@ -1737,11 +1737,10 @@
       "../src/helpers/Log.ts",
       "../src/helpers/Server.ts",
       "../src/config/EventListeners.ts",
+      "../src/index.ts",
       "../src/helpers/Command.ts",
       "../src/commands/GetCommand.ts",
       "../src/commands/JoinCommand.ts",
-      "../src/commands/LeaveCommand.ts",
-      "../src/commands/PlayCommand.ts",
       "../src/commands/SayCommand.ts",
       "../src/commands/ServerCommand.ts",
       "../src/commands/SetCommand.ts",
@@ -1796,7 +1795,8 @@
       "../node_modules/@types/node/ts3.2/util.d.ts",
       "../node_modules/@types/node/ts3.2/globals.d.ts",
       "../node_modules/@types/node/ts3.2/index.d.ts",
-      "../src/index.ts"
+      "../src/commands/LeaveCommand.ts",
+      "../src/commands/PlayCommand.ts"
     ]
   },
   "version": "3.7.2"

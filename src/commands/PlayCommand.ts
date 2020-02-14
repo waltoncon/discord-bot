@@ -3,9 +3,9 @@ import Command, { Option } from "../helpers/Command";
 import { Channel, VoiceChannel, VoiceConnection } from "discord.js";
 import * as fs from "fs";
 
-export default class StubCommand extends Command {
+export default class PlayCommand extends Command {
     name: string = null;
-    description: string = 'Description';
+    description: string = 'Play an audio file in the voice channel with the given ID';
     options: Option[] = [];
 
     constructor(input, props) {

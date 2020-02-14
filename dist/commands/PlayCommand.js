@@ -12,11 +12,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Log_1 = require("../helpers/Log");
 const Command_1 = require("../helpers/Command");
 const fs = require("fs");
-class StubCommand extends Command_1.default {
+class PlayCommand extends Command_1.default {
     constructor(input, props) {
         super(input, props);
         this.name = null;
-        this.description = 'Description';
+        this.description = 'Play an audio file in the voice channel with the given ID';
         this.options = [];
         this.parse(input);
     }
@@ -57,5 +57,5 @@ class StubCommand extends Command_1.default {
         });
     }
 }
-exports.default = StubCommand;
+exports.default = PlayCommand;
 //# sourceMappingURL=PlayCommand.js.map

@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const Log_1 = require("../helpers/Log");
 const Command_1 = require("../helpers/Command");
-class StubCommand extends Command_1.default {
+class LeaveCommand extends Command_1.default {
     constructor(input, props) {
         super(input, props);
         this.name = null;
-        this.description = 'Description';
+        this.description = 'Leave the voice channel provided';
         this.options = [];
         this.parse(input);
     }
@@ -27,5 +27,5 @@ class StubCommand extends Command_1.default {
         Log_1.default.info(`Left channel`);
     }
 }
-exports.default = StubCommand;
+exports.default = LeaveCommand;
 //# sourceMappingURL=LeaveCommand.js.map

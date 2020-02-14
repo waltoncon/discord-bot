@@ -2,9 +2,9 @@ import Log from "../helpers/Log";
 import Command, { Option } from "../helpers/Command";
 import { VoiceConnection } from "discord.js";
 
-export default class StubCommand extends Command {
+export default class LeaveCommand extends Command {
     name: string = null;
-    description: string = 'Description';
+    description: string = 'Leave the voice channel provided';
     options: Option[] = [
 
     ];
