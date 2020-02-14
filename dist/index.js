@@ -1,133 +1,37 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 const path = require("path");
-const c = {};
-// glob.sync(path.resolve(__dirname, 'commands/*.js')).forEach(com => {
-//     const SingleCommand = require(com).default;
-//     const name = new SingleCommand().name;
-//     if (name == null) {
-//         c[name] = SingleCommand;
-//     }
-//
-// });
-// console.log(c);
-// process.exit();
-const dotenv_1 = require("dotenv");
-const discord_js_1 = require("discord.js");
-const Log_1 = require("./Log");
-const SayCommand_1 = require("./commands/SayCommand");
-const JoinCommand_1 = require("./commands/JoinCommand");
-const GetCommand_1 = require("./commands/GetCommand");
-const SetCommand_1 = require("./commands/SetCommand");
-const Server_1 = require("./Server");
-const ServerCommand_1 = require("./commands/ServerCommand");
-const env = path.resolve(__dirname, '../.env');
-dotenv_1.config({ path: env });
-Server_1.default.switch(process.env.DEFAULT_SERVER || 1);
-const commands = {
-    say: SayCommand_1.default,
-    join: JoinCommand_1.default,
-    get: GetCommand_1.default,
-    set: SetCommand_1.default,
-    server: ServerCommand_1.default
-};
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
+const clui = require("clui");
+require('dotenv').config({
+    path: path.resolve(__dirname, '../.env')
 });
-// Create an instance of a Discord client
-const client = new discord_js_1.Client();
-const rl = () => {
-    readline.question('> ', (input) => __awaiter(void 0, void 0, void 0, function* () {
-        if (input === "exit") {
-            Log_1.default.warn('Exiting');
-            process.exit();
-        }
-        const name = input.split(' ', 2)[0];
-        if (Object.keys(commands).includes(name)) {
+const discord_js_1 = require("discord.js");
+const Log_1 = require("./helpers/Log");
+const Server_1 = require("./helpers/Server");
+const EventListeners_1 = require("./config/EventListeners");
+Server_1.default.switch(process.env.DEFAULT_SERVER || 1);
+exports.client = new discord_js_1.Client();
+const countdown = new clui.Spinner('Loading discord bot...  ');
+countdown.start();
+exports.client.on('ready', () => {
+    countdown.stop();
+});
+for (const [event, listeners] of Object.entries(EventListeners_1.default)) {
+    exports.client.on(event, (...params) => {
+        for (const listener of listeners) {
+            // noinspection TypeScriptValidateJSTypes
             try {
-                yield new commands[name](input, { client }).handle();
+                // noinspection TypeScriptValidateJSTypes
+                require(`./events/${listener}`).default(...params);
             }
             catch (e) {
-                Log_1.default.error(`An error occurred while processing this command`);
-                Log_1.default.info(e.stack + '\n');
+                Log_1.default.error(`> Couldn't start ${event}::${listener}. ${e.message}`);
             }
         }
-        else {
-            Log_1.default.warn(`command not found: ${name}`);
-        }
-        rl();
-    }));
-};
-Log_1.default.info('Discord bot');
-Log_1.default.line('loading...');
-/**
- * The ready event is vital, it means that only _after_ this will your bot start reacting to information
- * received from Discord
- */
-client.on('ready', () => {
-    rl();
-});
-client.on('message', (message) => {
-    if (message.member.id === process.env.OKAY_USER_ID && message.content === 'Okay') {
-        message.channel.send('Okay');
-    }
-    if (message.content === 'do it') {
-        var voiceChannel = message.member.voiceChannel;
-        voiceChannel.join().then(connection => {
-            const dispatcher = connection.playFile('/home/waltonc/Resources/audio/memes/wii-shop-music.mp3');
-            dispatcher.on("end", end => {
-                // voiceChannel.leave()
-            });
-        }).catch(err => console.log(err));
-    }
-});
-client.on('voiceStateUpdate', (oldMember, newMember) => {
-    // @ts-ignore
-    const channel = client.channels.get(process.env.TEXT_PRIMARY_ID);
-    // @ts-ignore
-    const waitingChannel = client.channels.get(process.env.VOICE_WAITING_ID);
-    // channel.sendMessage(`${newMember.user.username} has joined ${newMember.voiceChannel.name}`);
-    if (newMember.voiceChannel === undefined) {
-        return;
-    }
-    if (newMember.voiceChannel.id === process.env.VOICE_PRIMARY_ID) {
-        // Move all users from waiting lounge
-        // let movedUsers =
-        const members = waitingChannel.members.map((member) => __awaiter(void 0, void 0, void 0, function* () {
-            yield member.setVoiceChannel(process.env.VOICE_PRIMARY_ID);
-            // return .then(m => {
-            //     const message = `Moved ${m.user.username} to main chat`;
-            //     channel.send(message);
-            //     console.log(message);
-            //     return m
-            // });
-            // return member.user.username;
-        }));
-        // const formatter = new Intl.ListFormat();
-        // console.log(members);
-        // let response = '';
-        // if (movedUsers.length >= 2) {
-        //     var last = movedUsers.pop();
-        //     response = movedUsers.join(', ') + ' and ' + last;
-        //     console.log(response);
-        // } else {
-        //     response = movedUsers[0];
-        // }
-        // channel
-    }
-});
+    });
+}
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
-client.login(process.env.DISCORD_BOT_TOKEN);
+exports.client.login(process.env.DISCORD_BOT_TOKEN);
 // Other events
 // client.on('channelCreate', (...args) => {console.log('channelCreate', {...args})});
 // client.on('channelDelete', (...args) => {console.log('channelDelete', {...args})});

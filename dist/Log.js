@@ -36,6 +36,9 @@ class Log {
     static error(message) {
         console.log(`${FgRed}%s${Reset}`, message);
     }
+    static debug(message) {
+        console.log(`${FgBlue}%s${Reset}`, message);
+    }
 }
 exports.default = Log;
 //# sourceMappingURL=Log.js.map

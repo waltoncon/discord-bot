@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Log_1 = require("../Log");
-const Command_1 = require("../Command");
+const Log_1 = require("../helpers/Log");
+const Command_1 = require("../helpers/Command");
 class JoinCommand extends Command_1.default {
     constructor(input, props) {
         super(input, props);
@@ -23,12 +23,18 @@ class JoinCommand extends Command_1.default {
     }
     handle() {
         return __awaiter(this, void 0, void 0, function* () {
+            const identifier = this.args[0];
             // @ts-ignore
             const channel = this.client.channels.find((channel) => {
                 return channel.type === 'voice'
-                    && (channel['id'] === this.args[0]
-                        || channel['name'] === this.args[0]);
+                    && (channel['id'] === identifier
+                        || channel['name'] === identifier
+                        || channel['name'].toLowerCase() === identifier.toLowerCase());
             });
+            if (!channel) {
+                Log_1.default.warn(`Can't find the channel '${identifier}'`);
+                return;
+            }
             Log_1.default.info(`Joining ${channel.name} [${channel.id}]`);
             yield channel.join();
             Log_1.default.info(`Joined ${channel.name} [${channel.id}]`);

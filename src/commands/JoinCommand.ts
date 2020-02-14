@@ -1,5 +1,5 @@
-import Log from "../Log";
-import Command, { Option } from "../Command";
+import Log from "../helpers/Log";
+import Command, { Option } from "../helpers/Command";
 import { Channel, TextChannel, VoiceChannel } from "discord.js";
 
 export default class JoinCommand extends Command {
@@ -15,12 +15,20 @@ export default class JoinCommand extends Command {
     }
 
     async handle() {
+        const identifier = this.args[0];
+
         // @ts-ignore
         const channel: VoiceChannel = this.client.channels.find((channel: Channel) => {
             return channel.type === 'voice'
-                && (channel['id'] === this.args[0]
-                    || channel['name'] === this.args[0])
+                && (channel['id'] === identifier
+                    || channel['name'] === identifier
+                    || channel['name'].toLowerCase() === identifier.toLowerCase())
         });
+
+        if (!channel) {
+            Log.warn(`Can't find the channel '${identifier}'`);
+            return;
+        }
 
         Log.info(`Joining ${channel.name} [${channel.id}]`);
         await channel.join();

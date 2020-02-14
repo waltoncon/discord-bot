@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const Log_1 = require("../Log");
-const Command_1 = require("../Command");
+const Log_1 = require("../helpers/Log");
+const Command_1 = require("../helpers/Command");
 class SayCommand extends Command_1.default {
     constructor(input, props) {
         super(input, props);

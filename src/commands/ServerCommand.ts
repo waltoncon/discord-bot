@@ -1,7 +1,8 @@
-import Log from "../Log";
-import Command, { Option } from "../Command";
+import Log from "../helpers/Log";
+import Command, { Option } from "../helpers/Command";
 import {} from "discord.js";
-import Server from "../Server";
+import Server from "../helpers/Server";
+require('console.table');
 
 export default class ServerCommand extends Command {
     name: string = 'server';
@@ -25,7 +26,8 @@ export default class ServerCommand extends Command {
         }
 
         if (this.args[0] === 'get') {
-            Server.get();
+            const data = Server.get();
+            console.table(data);
         }
     }
 }

@@ -1,6 +1,5 @@
-import Log from "../Log";
-import Command, { Option } from "../Command";
-import {  } from "discord.js";
+import Log from "../helpers/Log";
+import Command, { Option } from "../helpers/Command";
 
 export default class StubCommand extends Command {
     name: string = 'get';

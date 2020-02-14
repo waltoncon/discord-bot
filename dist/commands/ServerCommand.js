@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Command_1 = require("../Command");
-const Server_1 = require("../Server");
+const Command_1 = require("../helpers/Command");
+const Server_1 = require("../helpers/Server");
+require('console.table');
 class ServerCommand extends Command_1.default {
     constructor(input, props) {
         super(input, props);
@@ -20,7 +21,8 @@ class ServerCommand extends Command_1.default {
             Server_1.default.switch(this.args[1]);
         }
         if (this.args[0] === 'get') {
-            Server_1.default.get();
+            const data = Server_1.default.get();
+            console.table(data);
         }
     }
 }

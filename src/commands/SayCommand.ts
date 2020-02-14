@@ -1,5 +1,5 @@
-import Log from "../Log";
-import Command, { Option } from "../Command";
+import Log from "../helpers/Log";
+import Command, { Option } from "../helpers/Command";
 import { TextChannel } from "discord.js";
 
 export default class SayCommand extends Command {

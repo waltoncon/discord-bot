@@ -133,17 +133,77 @@
         "version": "603225f61b0e6f8c3e9a9df0b09ab8ccfb3590d3e2d2e6b519714773fb7ac96a",
         "signature": "603225f61b0e6f8c3e9a9df0b09ab8ccfb3590d3e2d2e6b519714773fb7ac96a"
       },
-      "../src/Log.ts": {
-        "version": "d588eba4e860b631dc39fc3730290df1d6e02282eb09c2e5e232456473aa45bc",
-        "signature": "f4bb352c75c9d9251f0ea3a4dac7b8942dbc166d041985897f334a853d714ad7"
+      "../src/helpers/Log.ts": {
+        "version": "09ba7fa3720ab3a0b470533c21b3b964df48e19c7950c8875f6d2817a2317cce",
+        "signature": "88eebba594cb087ad46dc916335eacc91c78e7a0d5cfc335ea8d6dbbc2c2e76c"
       },
-      "../src/Command.ts": {
+      "../src/helpers/Server.ts": {
+        "version": "64a9db61283d04cf829db6d11cce3e5662f318793aff9dfcc9bee4859a5d71dc",
+        "signature": "e9d882ef6aff670d9aa5e5488d8a2077bf14f6b39c1bad851b8e6353e4d4b229"
+      },
+      "../src/config/EventListeners.ts": {
+        "version": "f8c23ed921988051aa08943b044fd6534f65e1c64a8d7534746129053ae0bc21",
+        "signature": "e406d854875a8ac5d14dda60938852629fa8060e4ee165319fdd8a498da07061"
+      },
+      "../src/index.ts": {
+        "version": "59b411699f64094d50a58cfa386e1ebec0abb25100cf14f9e5d4b750791cddc0",
+        "signature": "a0c33433c533f3f5db420fbea626076d39f43116417210142345f5c7823720ed"
+      },
+      "../src/helpers/Command.ts": {
         "version": "f89723cb59027151fc4cbab36df4d466d33626decfab53852cc5cf21b1d71959",
         "signature": "f58fbf807f0380e0aec22a730976f946f23ee4e2f374e1eb34ca2bf716c65d16"
       },
-      "../src/Server.ts": {
-        "version": "938be102eac916c1a65a4e11210203bcf8f86d8591eacae1428eb741b4ae2b10",
-        "signature": "700bdc308d75b4315f3b309630fca0f6fa97edc81cf4554bd31eb2b30e5f7d39"
+      "../src/commands/GetCommand.ts": {
+        "version": "7bfe1d8d00cbdb4ff688344e26ce7540cfe06121609fa3d03d4bfabd73c62cb7",
+        "signature": "ed13ab19c3c79ccaeca7707536513142a73e3136c891b783f0baf70309dceb08"
+      },
+      "../src/commands/JoinCommand.ts": {
+        "version": "936023b816ddd48015b47152112b1c1fd4c362dc36be93218c3458c09c9407ac",
+        "signature": "a13f4283e0e064d3a6f5326da39cf0425d65e92a96cf9c2a8d8c16b97ea1fad5"
+      },
+      "../src/commands/LeaveCommand.ts": {
+        "version": "6af738c5235efa9c652720c2365400172790b9997a5a0b893acf2a59a8461d99",
+        "signature": "5d0c5ca42f77ea8b3a315c258e7b816d602fc5b48848bb42e7a84c67a1c38a4e"
+      },
+      "../src/commands/PlayCommand.ts": {
+        "version": "7fb7c7ec21fe60d1c428ac46da0577703484c82dc0f9580704635b6d6d260986",
+        "signature": "0312c05ca58c3093e913b0159726726b3dca60a3c4cbdd9f8669c40a77d416e4"
+      },
+      "../src/commands/SayCommand.ts": {
+        "version": "7bf714f7c02607bb3db4d2f7184c2df8eca2f7c97f685b700a4d1b6a50f3444b",
+        "signature": "d78953643ed72a4dfcfa7a9d33dae32c44a0efd4902e0d16d9db6d322c5b012b"
+      },
+      "../src/commands/ServerCommand.ts": {
+        "version": "62e0501c319ac6cdf465f46841fbafa1f3ada0db1328cc78f44f03f6efd3ecda",
+        "signature": "f7b861777269016fa542c4c5287edc291f28cd8167b7c130dd3b5bbde153dc2e"
+      },
+      "../src/commands/SetCommand.ts": {
+        "version": "5d668f89e6234f62dda8515b8112ac7217eb47ee25d8ddcbddfa36d02a3731fd",
+        "signature": "ed13ab19c3c79ccaeca7707536513142a73e3136c891b783f0baf70309dceb08"
+      },
+      "../src/commands/StubCommand.ts": {
+        "version": "8105afeb4797d1cd4ce5cd88e61cc5184a47ef57a11f0f2d5f987be846a5ef0b",
+        "signature": "5d0c5ca42f77ea8b3a315c258e7b816d602fc5b48848bb42e7a84c67a1c38a4e"
+      },
+      "../src/config/Commands.ts": {
+        "version": "c758b0575f180b7e12250a1e6880d5801bdd86f1347e3f28bca40eaf40e0f0ce",
+        "signature": "4e90dd522ccef8f680f864f4fa7e8f83d9f40884a92ad5631144a5fe7006a437"
+      },
+      "../src/events/LinkShortifier.ts": {
+        "version": "d4a8832a3f182241b0638632b58cda110edb74e041247dca802801f35faa57f9",
+        "signature": "8bb1af7aae318bddb9e08334ae08b480a50993a53cc15f06619fcb088b5c60ea"
+      },
+      "../src/events/MoveWaitingUsers.ts": {
+        "version": "d0b29f3e1f120944b442d3ac62cd10bec89bdaf58370bc211fc8e8d30a9acf72",
+        "signature": "d848c7511e19353cf66aa34ca6f88e32632070e15df4ccf78176b2f061d60796"
+      },
+      "../src/events/StartTerminal.ts": {
+        "version": "06f236cffdab77e07cf1d57a779b968d3dee7be176cea1af3ab6f88b20781920",
+        "signature": "feb6863c10e1675b736aea34b86be2d612d175f9ec91663b0013fdad92054bf4"
+      },
+      "../src/helpers/Present.ts": {
+        "version": "02b50d71fb2ca82f808eb62583f145d5f67eee38e953b4eada7da8101e70f60f",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "../node_modules/@types/node/globals.d.ts": {
         "version": "05c42320698cb6eb4052d68ef35a0f3b88291b9275f13e9a188b96119844c5b6",
@@ -324,38 +384,6 @@
       "../node_modules/@types/node/ts3.2/index.d.ts": {
         "version": "7c7dabe6de2f88a1b4a4d9a15479c2a99b6f5864b434b9d960fc312ba9498c0a",
         "signature": "7c7dabe6de2f88a1b4a4d9a15479c2a99b6f5864b434b9d960fc312ba9498c0a"
-      },
-      "../node_modules/dotenv/types/index.d.ts": {
-        "version": "c9ae0b351a07b52f29a28e869d8c7c8d29743bbb5eeddc7c0b5b2a69a2450528",
-        "signature": "c9ae0b351a07b52f29a28e869d8c7c8d29743bbb5eeddc7c0b5b2a69a2450528"
-      },
-      "../src/commands/SayCommand.ts": {
-        "version": "585aa9f46837a02b92b0af595745934b828482c2ac77df2589714ca5b252471c",
-        "signature": "eaa76f8934ff438911a435dab5ddcbe59bb6a9997d3e1be2782c5729d031c89e"
-      },
-      "../src/commands/JoinCommand.ts": {
-        "version": "448c4f557612f816336af80c7ce484d288144447a2078e9185b277e44c818125",
-        "signature": "6147e7b3429782539d65caa9d9fc63422d81d939e32df725d43bf326d07f888e"
-      },
-      "../src/commands/GetCommand.ts": {
-        "version": "a921492d6a75b861051223189f6e450d132f6ee42b4ed057a5b8aaba617f9071",
-        "signature": "616bc73de1889a21868c8cc852eec3f9c17cfba5e57c1c69e82410f997d6d07c"
-      },
-      "../src/commands/SetCommand.ts": {
-        "version": "a03675eb4119adab9d07ebc2cbe778bd259a358e3ef2617f42358e28213a5779",
-        "signature": "616bc73de1889a21868c8cc852eec3f9c17cfba5e57c1c69e82410f997d6d07c"
-      },
-      "../src/commands/ServerCommand.ts": {
-        "version": "d24a16caad7c915b6c73855063bb4125181ff41e87c5b6abd3d9386c4533b69b",
-        "signature": "e67e73d0faf11a9ff15fbc7cfb7465115b13e1da1c4b924b065dc7835575f59d"
-      },
-      "../src/index.ts": {
-        "version": "10404a6d3dc870a9456b747781aeba4ea3cc98d5d6dd372f71e433fb51739775",
-        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
-      },
-      "../src/commands/StubCommand.ts": {
-        "version": "719972dc5113677838f5ae3e2f8a200f2d2a666dd57d858e64db2adbd872a76b",
-        "signature": "1df5b317263264575a2c5d1cb2c189e17ba7516e3c5b6ce8b14e959e9bd8f66f"
       }
     },
     "options": {
@@ -571,22 +599,148 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/Log.ts": [
+      "../src/helpers/Log.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/Command.ts": [
+      "../src/helpers/Server.ts": [
+        "../src/helpers/Log.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/config/EventListeners.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/index.ts": [
+        "../node_modules/@types/node/path.d.ts",
         "../node_modules/discord.js/typings/index.d.ts",
-        "../src/Log.ts",
+        "../src/helpers/Log.ts",
+        "../src/helpers/Server.ts",
+        "../src/config/EventListeners.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/Server.ts": [
-        "../src/Log.ts",
+      "../src/helpers/Command.ts": [
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../src/helpers/Log.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/commands/GetCommand.ts": [
+        "../src/helpers/Log.ts",
+        "../src/helpers/Command.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/commands/JoinCommand.ts": [
+        "../src/helpers/Log.ts",
+        "../src/helpers/Command.ts",
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/commands/LeaveCommand.ts": [
+        "../src/helpers/Log.ts",
+        "../src/helpers/Command.ts",
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/commands/PlayCommand.ts": [
+        "../src/helpers/Log.ts",
+        "../src/helpers/Command.ts",
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/commands/SayCommand.ts": [
+        "../src/helpers/Log.ts",
+        "../src/helpers/Command.ts",
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/commands/ServerCommand.ts": [
+        "../src/helpers/Log.ts",
+        "../src/helpers/Command.ts",
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../src/helpers/Server.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/commands/SetCommand.ts": [
+        "../src/helpers/Log.ts",
+        "../src/helpers/Command.ts",
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/commands/StubCommand.ts": [
+        "../src/helpers/Log.ts",
+        "../src/helpers/Command.ts",
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/config/Commands.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/events/LinkShortifier.ts": [
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/events/MoveWaitingUsers.ts": [
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../src/index.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/events/StartTerminal.ts": [
+        "../src/helpers/Log.ts",
+        "../src/config/Commands.ts",
+        "../node_modules/@types/node/repl.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/helpers/Present.ts": [
+        "../src/helpers/Command.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -948,84 +1102,6 @@
         "../node_modules/@types/node/ts3.2/globals.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/dotenv/types/index.d.ts": [
-        "../node_modules/@types/node/ts3.2/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/commands/SayCommand.ts": [
-        "../src/Log.ts",
-        "../src/Command.ts",
-        "../node_modules/discord.js/typings/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/commands/JoinCommand.ts": [
-        "../src/Log.ts",
-        "../src/Command.ts",
-        "../node_modules/discord.js/typings/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/commands/GetCommand.ts": [
-        "../src/Log.ts",
-        "../src/Command.ts",
-        "../node_modules/discord.js/typings/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/commands/SetCommand.ts": [
-        "../src/Log.ts",
-        "../src/Command.ts",
-        "../node_modules/discord.js/typings/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/commands/ServerCommand.ts": [
-        "../src/Log.ts",
-        "../src/Command.ts",
-        "../node_modules/discord.js/typings/index.d.ts",
-        "../src/Server.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/index.ts": [
-        "../node_modules/@types/node/path.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/dotenv/types/index.d.ts",
-        "../node_modules/discord.js/typings/index.d.ts",
-        "../src/Log.ts",
-        "../src/commands/SayCommand.ts",
-        "../src/commands/JoinCommand.ts",
-        "../src/commands/GetCommand.ts",
-        "../src/commands/SetCommand.ts",
-        "../src/Server.ts",
-        "../src/commands/ServerCommand.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/commands/StubCommand.ts": [
-        "../src/Log.ts",
-        "../src/Command.ts",
-        "../node_modules/discord.js/typings/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
       ]
     },
     "exportedModulesMap": {
@@ -1230,7 +1306,40 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/Command.ts": [
+      "../src/index.ts": [
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
+      "../src/helpers/Command.ts": [
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
+      "../src/commands/GetCommand.ts": [
+        "../src/helpers/Command.ts"
+      ],
+      "../src/commands/JoinCommand.ts": [
+        "../src/helpers/Command.ts"
+      ],
+      "../src/commands/LeaveCommand.ts": [
+        "../src/helpers/Command.ts"
+      ],
+      "../src/commands/PlayCommand.ts": [
+        "../src/helpers/Command.ts"
+      ],
+      "../src/commands/SayCommand.ts": [
+        "../src/helpers/Command.ts"
+      ],
+      "../src/commands/ServerCommand.ts": [
+        "../src/helpers/Command.ts"
+      ],
+      "../src/commands/SetCommand.ts": [
+        "../src/helpers/Command.ts"
+      ],
+      "../src/commands/StubCommand.ts": [
+        "../src/helpers/Command.ts"
+      ],
+      "../src/events/LinkShortifier.ts": [
+        "../node_modules/discord.js/typings/index.d.ts"
+      ],
+      "../src/events/MoveWaitingUsers.ts": [
         "../node_modules/discord.js/typings/index.d.ts"
       ],
       "../node_modules/@types/node/globals.d.ts": [
@@ -1589,31 +1698,6 @@
         "../node_modules/@types/node/ts3.2/globals.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/dotenv/types/index.d.ts": [
-        "../node_modules/@types/node/ts3.2/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/commands/SayCommand.ts": [
-        "../src/Command.ts"
-      ],
-      "../src/commands/JoinCommand.ts": [
-        "../src/Command.ts"
-      ],
-      "../src/commands/GetCommand.ts": [
-        "../src/Command.ts"
-      ],
-      "../src/commands/SetCommand.ts": [
-        "../src/Command.ts"
-      ],
-      "../src/commands/ServerCommand.ts": [
-        "../src/Command.ts"
-      ],
-      "../src/commands/StubCommand.ts": [
-        "../src/Command.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -1650,9 +1734,23 @@
       "../node_modules/typescript/lib/lib.esnext.bigint.d.ts",
       "../node_modules/typescript/lib/lib.es2016.full.d.ts",
       "../node_modules/discord.js/typings/index.d.ts",
-      "../src/Log.ts",
-      "../src/Command.ts",
-      "../src/Server.ts",
+      "../src/helpers/Log.ts",
+      "../src/helpers/Server.ts",
+      "../src/config/EventListeners.ts",
+      "../src/helpers/Command.ts",
+      "../src/commands/GetCommand.ts",
+      "../src/commands/JoinCommand.ts",
+      "../src/commands/LeaveCommand.ts",
+      "../src/commands/PlayCommand.ts",
+      "../src/commands/SayCommand.ts",
+      "../src/commands/ServerCommand.ts",
+      "../src/commands/SetCommand.ts",
+      "../src/commands/StubCommand.ts",
+      "../src/config/Commands.ts",
+      "../src/events/LinkShortifier.ts",
+      "../src/events/MoveWaitingUsers.ts",
+      "../src/events/StartTerminal.ts",
+      "../src/helpers/Present.ts",
       "../node_modules/@types/node/globals.d.ts",
       "../node_modules/@types/node/assert.d.ts",
       "../node_modules/@types/node/async_hooks.d.ts",
@@ -1698,13 +1796,6 @@
       "../node_modules/@types/node/ts3.2/util.d.ts",
       "../node_modules/@types/node/ts3.2/globals.d.ts",
       "../node_modules/@types/node/ts3.2/index.d.ts",
-      "../node_modules/dotenv/types/index.d.ts",
-      "../src/commands/SayCommand.ts",
-      "../src/commands/JoinCommand.ts",
-      "../src/commands/GetCommand.ts",
-      "../src/commands/SetCommand.ts",
-      "../src/commands/ServerCommand.ts",
-      "../src/commands/StubCommand.ts",
       "../src/index.ts"
     ]
   },

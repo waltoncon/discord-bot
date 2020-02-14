@@ -1,4 +1,4 @@
-import Command, { Option } from "../Command";
+import Command, { Option } from "../helpers/Command";
 export default class SayCommand extends Command {
     name: string;
     description: string;
