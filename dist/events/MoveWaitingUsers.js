@@ -10,7 +10,23 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const index_1 = require("../index");
-exports.default = (oldMember, newMember) => {
+class DiscordEventHandler {
+    constructor(params) {
+        Object.assign(this, params);
+    }
+    handle() { }
+}
+class MoveWaintingUsers {
+    handle() {
+    }
+}
+/**
+ *
+ * @param oldMember
+ * @param newMember
+ * @constructor
+ */
+const old = (oldMember, newMember) => {
     // @ts-ignore
     const channel = index_1.client.channels.get(process.env.TEXT_PRIMARY_ID);
     // @ts-ignore
@@ -48,4 +64,5 @@ exports.default = (oldMember, newMember) => {
         // channel
     }
 };
+exports.default = MoveWaintingUsers;
 //# sourceMappingURL=MoveWaitingUsers.js.map

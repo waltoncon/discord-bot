@@ -1,3 +1,15 @@
 import { GuildMember } from "discord.js";
-declare const _default: (oldMember: GuildMember, newMember: GuildMember) => void;
-export default _default;
+declare class DiscordEventHandler {
+    constructor(params: any);
+    handle(): void;
+}
+interface voiceStateUpdate extends DiscordEventHandler {
+    oldMember: GuildMember;
+    newMember: GuildMember;
+}
+declare class MoveWaintingUsers implements voiceStateUpdate {
+    newMember: GuildMember;
+    oldMember: GuildMember;
+    handle(): void;
+}
+export default MoveWaintingUsers;

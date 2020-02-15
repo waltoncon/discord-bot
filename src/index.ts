@@ -16,16 +16,19 @@ const countdown = new clui.Spinner('Loading discord bot...  ');
 countdown.start();
 
 client.on('ready', () => {
-    countdown.stop()
+    countdown.stop();
 });
 
 for(const [event, listeners] of Object.entries(EventListeners)) {
     client.on(event, (...params) => {
+        // @ts-ignore
+        params = {test: 'tests'};
         for (const listener of listeners) {
             // noinspection TypeScriptValidateJSTypes
             try {
                 // noinspection TypeScriptValidateJSTypes
-                require(`./events/${listener}`).default(...params);
+                const Class = require(`./events/${listener}`).default;
+                new Class(params).handle();
             } catch (e) {
                 Log.error(`> Couldn't start ${event}::${listener}. ${e.message}`)
             }

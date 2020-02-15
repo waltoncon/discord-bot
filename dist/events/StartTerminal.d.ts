@@ -1,2 +1,8 @@
-declare const handle: (client: any) => Promise<void>;
-export default handle;
+import DiscordEventHandler from "../helpers/DiscordEventHandler";
+import { DiscordReadyEvent } from "./DiscordEvents";
+declare class StartTerminal extends DiscordEventHandler implements DiscordReadyEvent {
+    test: object;
+    constructor(params: any);
+    handle(): Promise<void>;
+}
+export default StartTerminal;
