@@ -5,7 +5,7 @@ import { DiscordMessageEvent } from "./DiscordEvents";
  * made shorter then the original message will be removed and the bot will send
  * a shortened version
  */
-declare class LinkShortifier extends DiscordMessageEvent {
+declare class TestMessage extends DiscordMessageEvent {
     handle(): void;
 }
-export default LinkShortifier;
+export default TestMessage;

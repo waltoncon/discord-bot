@@ -11,16 +11,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const Log_1 = require("../helpers/Log");
 const Commands_1 = require("../config/Commands");
-const DiscordEventHandler_1 = require("../helpers/DiscordEventHandler");
+const DiscordEvents_1 = require("./DiscordEvents");
 const index_1 = require("../index");
 const readline = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
 });
-class StartTerminal extends DiscordEventHandler_1.default {
-    constructor(params) {
-        super(params);
-    }
+/**
+ * @memberOf DiscordEvents
+ */
+class StartTerminal extends DiscordEvents_1.DiscordReadyEvent {
     handle() {
         return __awaiter(this, void 0, void 0, function* () {
             readline.on('SIGINT', () => {

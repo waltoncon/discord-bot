@@ -1,10 +1,7 @@
-/**
- * @abstract
- */
-class DiscordEventHandler {
-    constructor(params) {
-        Object.assign(this, params);
-        console.log(params);
+abstract class DiscordEventHandler {
+    protected props: any;
+    constructor(props) {
+        this.props = props;
     }
     handle() {}
 }

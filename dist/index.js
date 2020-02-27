@@ -19,7 +19,7 @@ exports.client.on('ready', () => {
 for (const [event, listeners] of Object.entries(EventListeners_1.default)) {
     exports.client.on(event, (...params) => {
         // @ts-ignore
-        params = { test: 'tests' };
+        // params = {test: 'tests'};
         for (const listener of listeners) {
             // noinspection TypeScriptValidateJSTypes
             try {

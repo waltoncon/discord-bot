@@ -1,9 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class DiscordEventHandler {
-    constructor(params) {
-        Object.assign(this, params);
-        console.log(params);
+    constructor(props) {
+        this.props = props;
     }
     handle() { }
 }

@@ -1,5 +1,4 @@
 import { Message } from "discord.js";
-import DiscordEventHandler from "../helpers/DiscordEventHandler";
 import { DiscordMessageEvent } from "./DiscordEvents";
 
 /**
@@ -8,10 +7,9 @@ import { DiscordMessageEvent } from "./DiscordEvents";
  * made shorter then the original message will be removed and the bot will send
  * a shortened version
  */
-class LinkShortifier extends DiscordEventHandler implements DiscordMessageEvent {
-    message: Message;
+class LinkShortifier extends DiscordMessageEvent {
     handle() {
-
+        console.log(`Message content:`, this.message.content);
     }
 }
 

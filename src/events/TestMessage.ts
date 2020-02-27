@@ -1,11 +1,15 @@
 import { DiscordMessageEvent } from "./DiscordEvents";
+
 /**
  * @memberOf DiscordEvents
  * @description Shortify any links that appear in a message, if the message is
  * made shorter then the original message will be removed and the bot will send
  * a shortened version
  */
-declare class LinkShortifier extends DiscordMessageEvent {
-    handle(): void;
+class TestMessage extends DiscordMessageEvent {
+    handle() {
+        console.log(`Message content:`, this.message);
+    }
 }
-export default LinkShortifier;
+
+export default TestMessage;

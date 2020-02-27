@@ -142,11 +142,11 @@
         "signature": "e9d882ef6aff670d9aa5e5488d8a2077bf14f6b39c1bad851b8e6353e4d4b229"
       },
       "../src/config/EventListeners.ts": {
-        "version": "f8c23ed921988051aa08943b044fd6534f65e1c64a8d7534746129053ae0bc21",
+        "version": "64015d505ddadfb6687dd15cda026ccbb2b2daabdcd72451f9e33d47e4f05450",
         "signature": "e406d854875a8ac5d14dda60938852629fa8060e4ee165319fdd8a498da07061"
       },
       "../src/index.ts": {
-        "version": "dd2fa3436e135cb145c0bf520e05a32d846da521944e6380c7afc04e2a4e917c",
+        "version": "658e00ddd81094bac00ae79e93f741ecd05de4413b4d5cf719a4eeae3df95266",
         "signature": "a0c33433c533f3f5db420fbea626076d39f43116417210142345f5c7823720ed"
       },
       "../src/helpers/Command.ts": {
@@ -189,25 +189,33 @@
         "version": "c758b0575f180b7e12250a1e6880d5801bdd86f1347e3f28bca40eaf40e0f0ce",
         "signature": "4e90dd522ccef8f680f864f4fa7e8f83d9f40884a92ad5631144a5fe7006a437"
       },
-      "../src/events/DiscordEvents.d.ts": {
-        "version": "6c5eddb6fae1012228f44c53a596505de1a9ab7dea40d72b564efc54eb4b8639",
-        "signature": "6c5eddb6fae1012228f44c53a596505de1a9ab7dea40d72b564efc54eb4b8639"
+      "../src/helpers/DiscordEventHandler.ts": {
+        "version": "cbc99b82dd294b7c5a0419ad9d09e03d5609676d45e309e236d9c243f698dd07",
+        "signature": "cfeed96d478e14bd9e4d909fc8d85246b95b22a3de20f0dacdd4bd39d8409142"
+      },
+      "../src/events/DiscordEvents.ts": {
+        "version": "533f749cb87a2fd40091428962481f6030b8bd5082f568f5f12ee8df13ac1ad5",
+        "signature": "603d39621338425518402c5ae4d2fba0d6c3d728f5129730fba207ae400057de"
+      },
+      "../src/events/KeepAwayFromUser.ts": {
+        "version": "80c88ea9b99292b4c4e03457a44a038c4f8a90ad6492e2fb78662089261649d1",
+        "signature": "c2581b3f0abb627be5aeaeb11ff8c4370b30afa1939f96731c806b104618faaf"
       },
       "../src/events/LinkShortifier.ts": {
-        "version": "d4a8832a3f182241b0638632b58cda110edb74e041247dca802801f35faa57f9",
-        "signature": "8bb1af7aae318bddb9e08334ae08b480a50993a53cc15f06619fcb088b5c60ea"
+        "version": "b35a20ee0897e8765d5bf171f8ee054884dbc41174217ecca1631c2bf252e208",
+        "signature": "a2bdc7c0a09c048c0a7dac377d967633c9914802605ba50e9dc1efe9308c185a"
       },
       "../src/events/MoveWaitingUsers.ts": {
-        "version": "8fd8ccd2cc84e39094f566f3625e278e31a28a2be2fbfa28eee343ae228bd8ea",
-        "signature": "06451433bb88e101f3251ece1f99de1a95c68df7015dd5f6ee3a0845fec84ed8"
-      },
-      "../src/helpers/DiscordEventHandler.ts": {
-        "version": "cdddc16b482a42186b08ebc011d19cb26016f60e655375c23d5212b0c7aaa3c1",
-        "signature": "a2ff83b7a25543b84e4a76a7be6701a3fcdc9d9e2c3888f71cd2fd6193fbe1c5"
+        "version": "739f1f3f87b2a2defe1b83497f0fa3539a6f04f43233ddf26b217ec77e92eaea",
+        "signature": "92dd55b2bc711d7cc5befb8f9e7cb6a621954d397a063e0f918d48472df8309c"
       },
       "../src/events/StartTerminal.ts": {
-        "version": "a9a94c32713ff4121c030df1003f629e4c446f8e60ea1397ff5bd54fda3b7ea6",
-        "signature": "4f3c88786210dbbae2b2b5c6e27d9ff498b4064418034a6114f7d684f1c66245"
+        "version": "066fd1b6c8fe9cfb6bdaccad52231befcd97b7f40016b628a03d21d03d78b979",
+        "signature": "4dcd273ce3c413c3b66177790349d57496a6f7b6cb5d5f1e92d6538368843370"
+      },
+      "../src/events/TestMessage.ts": {
+        "version": "2ad7ff18302b13284586c52dd0d9756fe37efa1169fe94a219d2b158cdcd6268",
+        "signature": "42ec8f7992d48c818337dedd1f85c992af82fe6238fd0489ad023bc85724f9b0"
       },
       "../src/helpers/Present.ts": {
         "version": "02b50d71fb2ca82f808eb62583f145d5f67eee38e953b4eada7da8101e70f60f",
@@ -723,8 +731,24 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/events/DiscordEvents.d.ts": [
+      "../src/helpers/DiscordEventHandler.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/events/DiscordEvents.ts": [
         "../node_modules/discord.js/typings/index.d.ts",
+        "../src/helpers/DiscordEventHandler.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/events/KeepAwayFromUser.ts": [
+        "../node_modules/discord.js/typings/index.d.ts",
+        "../src/index.ts",
+        "../src/events/DiscordEvents.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -732,6 +756,7 @@
       ],
       "../src/events/LinkShortifier.ts": [
         "../node_modules/discord.js/typings/index.d.ts",
+        "../src/events/DiscordEvents.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -740,12 +765,7 @@
       "../src/events/MoveWaitingUsers.ts": [
         "../node_modules/discord.js/typings/index.d.ts",
         "../src/index.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/helpers/DiscordEventHandler.ts": [
+        "../src/events/DiscordEvents.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -757,8 +777,15 @@
         "../node_modules/@types/node/repl.d.ts",
         "../node_modules/discord.js/typings/index.d.ts",
         "../src/helpers/DiscordEventHandler.ts",
-        "../src/events/DiscordEvents.d.ts",
+        "../src/events/DiscordEvents.ts",
         "../src/index.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/events/TestMessage.ts": [
+        "../src/events/DiscordEvents.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -1361,11 +1388,20 @@
       "../src/commands/StubCommand.ts": [
         "../src/helpers/Command.ts"
       ],
+      "../src/events/KeepAwayFromUser.ts": [
+        "../src/events/DiscordEvents.ts"
+      ],
       "../src/events/LinkShortifier.ts": [
-        "../node_modules/discord.js/typings/index.d.ts"
+        "../src/events/DiscordEvents.ts"
       ],
       "../src/events/MoveWaitingUsers.ts": [
-        "../node_modules/discord.js/typings/index.d.ts"
+        "../src/events/DiscordEvents.ts"
+      ],
+      "../src/events/StartTerminal.ts": [
+        "../src/events/DiscordEvents.ts"
+      ],
+      "../src/events/TestMessage.ts": [
+        "../src/events/DiscordEvents.ts"
       ],
       "../node_modules/@types/node/globals.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
@@ -1724,16 +1760,9 @@
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/util.d.ts"
       ],
-      "../src/events/DiscordEvents.d.ts": [
+      "../src/events/DiscordEvents.ts": [
         "../node_modules/discord.js/typings/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/events/StartTerminal.ts": [
-        "../src/helpers/DiscordEventHandler.ts",
-        "../src/events/DiscordEvents.d.ts"
+        "../src/helpers/DiscordEventHandler.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -1784,8 +1813,6 @@
       "../src/commands/SetCommand.ts",
       "../src/commands/StubCommand.ts",
       "../src/config/Commands.ts",
-      "../src/events/LinkShortifier.ts",
-      "../src/events/MoveWaitingUsers.ts",
       "../src/helpers/Present.ts",
       "../node_modules/@types/node/globals.d.ts",
       "../node_modules/@types/node/assert.d.ts",
@@ -1832,9 +1859,13 @@
       "../node_modules/@types/node/ts3.2/util.d.ts",
       "../node_modules/@types/node/ts3.2/globals.d.ts",
       "../node_modules/@types/node/ts3.2/index.d.ts",
-      "../src/events/DiscordEvents.d.ts",
+      "../src/helpers/DiscordEventHandler.ts",
       "../src/events/StartTerminal.ts",
-      "../src/helpers/DiscordEventHandler.ts"
+      "../src/events/DiscordEvents.ts",
+      "../src/events/TestMessage.ts",
+      "../src/events/MoveWaitingUsers.ts",
+      "../src/events/LinkShortifier.ts",
+      "../src/events/KeepAwayFromUser.ts"
     ]
   },
   "version": "3.7.2"

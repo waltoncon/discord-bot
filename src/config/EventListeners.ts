@@ -3,9 +3,11 @@ export default {
         'StartTerminal',
     ],
     message: [
-        'LinkShortifier'
+        'LinkShortifier',
+        // 'TestMessage',
     ],
     voiceStateUpdate: [
-        'MoveWaitingUsers'
+        'MoveWaitingUsers',
+        // 'KeepAwayFromUser',
     ]
 }

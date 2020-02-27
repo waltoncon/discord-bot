@@ -7,10 +7,10 @@ const DiscordEvents_1 = require("./DiscordEvents");
  * made shorter then the original message will be removed and the bot will send
  * a shortened version
  */
-class LinkShortifier extends DiscordEvents_1.DiscordMessageEvent {
+class TestMessage extends DiscordEvents_1.DiscordMessageEvent {
     handle() {
-        console.log(`Message content:`, this.message.content);
+        console.log(`Message content:`, this.message);
     }
 }
-exports.default = LinkShortifier;
-//# sourceMappingURL=LinkShortifier.js.map
+exports.default = TestMessage;
+//# sourceMappingURL=TestMessage.js.map

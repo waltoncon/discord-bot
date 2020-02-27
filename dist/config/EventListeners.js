@@ -5,10 +5,10 @@ exports.default = {
         'StartTerminal',
     ],
     message: [
-        'LinkShortifier'
+        'LinkShortifier',
     ],
     voiceStateUpdate: [
-        'MoveWaitingUsers'
+        'MoveWaitingUsers',
     ]
 };
 //# sourceMappingURL=EventListeners.js.map

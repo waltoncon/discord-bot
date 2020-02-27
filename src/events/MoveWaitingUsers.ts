@@ -1,15 +1,11 @@
 import { Client, GuildMember, TextChannel, VoiceChannel } from "discord.js";
 import { client } from "../index";
-import DiscordEventHandler from "../helpers/DiscordEventHandler";
 import { DiscordVoiceStateUpdateEvent } from "./DiscordEvents";
 
 /**
  * @memberOf DiscordEvents
  */
-class MoveWaintingUsers extends DiscordEventHandler implements DiscordVoiceStateUpdateEvent {
-    newMember: GuildMember;
-    oldMember: GuildMember;
-
+class MoveWaintingUsers extends DiscordVoiceStateUpdateEvent {
     handle(): void {
         const channel = <TextChannel>client.channels.get(process.env.TEXT_PRIMARY_ID);
         const waitingChannel = <VoiceChannel>client.channels.get(process.env.VOICE_WAITING_ID);

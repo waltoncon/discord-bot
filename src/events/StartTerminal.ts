@@ -14,12 +14,7 @@ const readline = require('readline').createInterface({
 /**
  * @memberOf DiscordEvents
  */
-class StartTerminal extends DiscordEventHandler implements DiscordReadyEvent {
-    test: object;
-    constructor(params) {
-        super(params);
-    }
-
+class StartTerminal extends DiscordReadyEvent {
     async handle() {
         readline.on('SIGINT', () => {
             Log.warn('\nExiting');
