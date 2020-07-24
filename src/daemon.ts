@@ -12,7 +12,7 @@ client.on('ready', () => {
 client.on('message', (message: Message) => {
     Log.debug(`Message from '${message.author.username}': ${message.content}`);
 
-    if(message.author.bot) return;
+    // if(message.author.bot) return;
 
-    message.reply('reply')
+    // message.reply('reply')
 })
