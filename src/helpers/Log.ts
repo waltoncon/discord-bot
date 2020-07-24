@@ -1,3 +1,5 @@
+import moment from "moment";
+
 const Reset = "\x1b[0m";
 const Bright = "\x1b[1m";
 const Dim = "\x1b[2m";
@@ -42,6 +44,6 @@ export default class Log {
     }
 
     static debug(message) {
-        console.log(`${FgBlue}%s${Reset}`, message)
+        console.log(`[${moment().utc().format('YYYY-MM-DDTHH:mm:ss.sss')}] %s`, message)
     }
 }
