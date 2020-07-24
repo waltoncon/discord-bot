@@ -6,6 +6,7 @@ import config from "../helpers/config";
 const lounges = config.get('lounges');
 
 client.on('voiceStateUpdate', async (oldState: VoiceState, newState: VoiceState) => {
+    Log.debug(`User voice state update [${newState.member?.user?.username}] ${oldState.channel?.name} (${oldState.channelID}) -> ${newState.channel?.name} (${newState.channelID})`);
     const loungeSnowflake = lounges[newState.channelID];
 
     if (loungeSnowflake) {
