@@ -5,16 +5,11 @@
   "license": "MIT",
   "dependencies": {
     "cliffy": "^2.3.0",
-    "clui": "^0.3.6",
-    "commander": "^5.1.0",
     "configstore": "^5.0.1",
     "console.table": "^0.10.0",
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
-    "glob": "^7.1.6",
     "moment": "^2.27.0",
-    "node-opus": "^0.3.3",
-    "nodemon": "^2.0.1",
     "typescript": "^3.7.2"
   },
   "scripts": {
